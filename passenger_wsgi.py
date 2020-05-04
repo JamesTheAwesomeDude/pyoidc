@@ -5,5 +5,5 @@ import sys
 
 sys.path.insert(0, os.path.dirname(__file__))
 
-wsgi = imp.load_source('wsgi', 'oidc.py')
+wsgi = imp.load_source('wsgi', 'oidc.cgi')
 application = wsgi.application
