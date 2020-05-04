@@ -1,0 +1,5 @@
+PyJWT[crypto]
+urllib3
+#mysql
+pymysql
+#mysqlclient
