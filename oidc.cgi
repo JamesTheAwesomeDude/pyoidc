@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import os
 import sys
-import pymysql as MySQL
+import pymysql as db
 import urllib3,json,jwt,urllib.parse,base64
 import traceback
 from http import cookies
@@ -10,7 +10,7 @@ from http import cookies
 
 mysql_db,mysql_host=os.environ['cache_db'].split('@',1)
 mysql_username,mysql_password=base64.b64decode(os.environ['cache_login']).decode().split(':',1)
-con=MySQL.connect(mysql_host,mysql_username,mysql_password,mysql_db)
+con=db.connect(mysql_host,mysql_username,mysql_password,mysql_db)
 
 http=urllib3.PoolManager()
 
